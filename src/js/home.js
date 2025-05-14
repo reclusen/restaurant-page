@@ -1,7 +1,7 @@
 import { h as htmlTree, s as svgTree } from "hastscript";
 
 import { specifyDOMTree, specifySVGTree } from "./tree.js";
-import { fonts } from "./fonts.js";
+import fonts from "./fonts.js";
 
 
 

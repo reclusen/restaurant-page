@@ -16,7 +16,7 @@
             padding: 32px 16px;
             border: 0;
             cursor: pointer;
-            z-index: 2;
+            z-index: 99;
         }
 
         [class^="arrow"]:hover {
@@ -53,14 +53,24 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
+            position: relative;
 
             figure {
-                transition: all 0.15s ease-in;
+                transition: all 0.2s ease-in;
             }
-            
-            figure:hover {
-                opacity: 0.75;
-                scale: 1.05;
+
+            .name {
+                position: absolute;
+                top: 35%;
+                width: 100%;
+                padding: 10px 5px;
+                border: 5px solid #fff;
+                color: #f2f2f2;
+                font-size: 2.75rem;
+                text-align: center;
+                text-transform: uppercase;
+                opacity: 0;
+                transition: opacity 0.2s ease-in;
             }
         }
     }

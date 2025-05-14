@@ -44,7 +44,7 @@ body {
         cursor: pointer;
     }
 
-    .nav-btn:hover {
+    .nav-btn:focus {
         background-color: #f2f2f2;
         color: #080808;
     }

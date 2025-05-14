@@ -1,6 +1,6 @@
 import { h as htmlTree } from "hastscript";
 
-import { fonts } from "./fonts";
+import fonts from "./fonts";
 import { specifyDOMTree } from "./tree.js";
 
 const displayAboutPage = () => {

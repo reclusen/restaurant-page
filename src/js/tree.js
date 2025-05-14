@@ -32,7 +32,6 @@ function specifyDOMTree(elementTree) {
                         element.classList.add(value);
                     });
                 }
-                console.log(elementTree);
 
                 if (property == "id") element.setAttribute("id", elementTree.properties["id"]);
             });
@@ -76,7 +75,6 @@ function specifySVGTree(svgTree) {
                     element.classList.add(value);
                 });
             } else {
-                console.log("property", property, svgTree.properties[property]);
                 element.setAttribute(property, svgTree.properties[property]);
             }
         });
@@ -87,8 +85,6 @@ function specifySVGTree(svgTree) {
         if (svgTree.children.length > 0) {
             svgTree.children.forEach(child => {
                 const node = specifySVGTree(child);
-
-                console.log("node", node);
 
                 if (typeof node == "string") {
                     element.textContent = node;
@@ -104,8 +100,6 @@ function specifySVGTree(svgTree) {
     if (svgTree.type == "text") {
         return svgTree.value;
     }
-
-    console.log("element", element);
 
     return element;
 }

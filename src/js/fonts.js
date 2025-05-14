@@ -9,4 +9,4 @@ const fonts = {
     freeman: "freeman-regular"
 };
 
-export { fonts };
+export default fonts;
