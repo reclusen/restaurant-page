@@ -1,0 +1,75 @@
+#about {    
+    .hero-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-img {
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.75)), url(../img/pizzas/fresh_pizza_pablo-pacheco-unsplash.png);
+    }
+
+    .hero-text {
+        position: absolute;
+        font-size: 6rem;
+        bottom: 50%;
+    }
+}
+
+.about-text {
+    position: absolute;
+    top: 35%;
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    height: 60%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+
+    .second h4 {
+        font-size: 1.75rem;
+        font-style: italic;
+        font-weight: 900;
+        margin-top: 16px;
+
+        + p {
+            margin-top: 12px;
+        }
+    }
+
+    .fourth {
+        margin-top: 32px;
+        text-align: center;
+
+        .section-title {
+            margin-bottom: 4px;
+        }
+    }
+
+    .section-title:last-child {
+        font-weight: 800;
+    }
+}
+
+.about-text div:not(.first) .section-title {
+    margin-top: 48px;
+}
+
+.section-title, .description {
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.25rem;
+}
+
+.about-text .description {
+    margin-top: 16px;
+
+    p {
+        font-size: 1.5rem;
+        font-family: "Franklin Gothic Book", sans-serif;
+        line-height: 35px;
+    }
+}

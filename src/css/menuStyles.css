@@ -1,0 +1,207 @@
+.header {
+    position: sticky;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.75));
+}
+
+#menu {
+    overflow-y: hidden;
+
+    .hero-inner {
+        [class^="arrow"] {
+            position: fixed;
+            top: 45%;
+            font-size: 6rem;
+            background-color: #8080808d;
+            color: #f2f2f2;
+            padding: 32px 16px;
+            border: 0;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        [class^="arrow"]:hover {
+            background-color: #6969698d;
+        }
+
+        .arrow-left {
+            right: 90%;
+        }
+
+        .arrow-right {
+            left: 90%;
+        }
+    }
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(4, 100%);
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+    overflow-x: scroll;
+    scrollbar-width: 0;
+    scroll-snap-align: start;
+
+    [class$="grid"] {
+        display: grid;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+
+        .item {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            figure {
+                transition: all 0.15s ease-in;
+            }
+            
+            figure:hover {
+                opacity: 0.75;
+                scale: 1.05;
+            }
+        }
+    }
+}
+
+.label {
+    display: flex;
+
+    .header {
+        position: relative;
+        writing-mode: sideways-lr;
+        font-size: 3rem;
+        text-align: center;
+        padding: 0 24px;
+    }
+}
+
+.pizza-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+    .pizza {
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .item:first-child .pizza {
+        background-image: url(../img/pizzas/bbq_chicken_pizza_warda-naeem-unsplash.png);
+    }
+    
+    .item:nth-child(2) .pizza {
+        background-image: url(../img/pizzas/pepperoni_pizza_david-foodphototasty-unsplash.png);
+    }
+
+    .item:nth-child(3) .pizza {
+        background-image: url(../img/pizzas/four_cheese_pizza_engin-akyurt-unsplash.png);
+        background-size: 145%;
+        background-position: 50% 75%;
+    }
+
+    .item:nth-child(4) .pizza {
+        background-image: url(../img/pizzas/meat_lovers_sharan-pagadala-unsplash.png);
+        background-size: 200%;
+        background-position: 50% 65%;
+    }
+
+    .item:nth-child(5) .pizza {
+        background-image: url(../img/pizzas/mushroom_pizza_amadeus-moga-unsplash.png);
+        background-size: 150%;
+        background-repeat: no-repeat;
+        background-position: -5% 35%;
+    }
+
+    .item:last-child .pizza {
+        background-image: url(../img/pizzas/spinach_pizza_engin-akyurt-unsplash.png);
+        background-position: center;
+    }
+}
+
+.appetizer-grid {
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+
+    .appetizer {
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .item:first-child .appetizer {
+        background-image: url(../img/appetizers/Hot-Artichoke-Spinach-Dip.png);
+    }
+
+    .item:nth-child(2) .appetizer {
+        background-image: url(../img/appetizers/Fried-Prosciutto-Tortellini.png);
+    }
+    
+    .item:last-child .appetizer {
+        background-image: url(../img/appetizers/French_Onion_Dip_Cups.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        grid-column: 1 / 3;
+    }
+}
+
+.beverage-grid {
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    grid-template-rows: 100%;
+
+    .beverage {
+        background-size: 195%;
+        background-position: 35% 50%;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+    }
+
+    .item:first-child .beverage {
+        background-image: url(../img/beverages/iced_tea_crystal-tubens-unsplash.jpg);
+        background-size: cover;
+    }
+
+    .item:nth-child(2) .beverage {
+        background-image: url(../img/beverages/mango_shake_alexander-mils-unsplash.jpg);
+    }
+
+    .item:nth-child(3) .beverage {
+        background-image: url(../img/beverages/strawberry_shake_vd-photography-unsplash.jpg);
+    }
+
+    .item:last-child .beverage {
+        background-image: url(../img/beverages/pepsi_nikhil-unsplash.jpg);
+        background-position: 75% 75%;
+        background-size: cover;
+    }
+}
+
+.dessert-grid {
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    
+    .dessert {
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .item:first-child .dessert {
+        background-image: url(../img/desserts/coffee_jelly.jpg);
+        background-position: center;
+    }
+
+    .item:nth-child(2) .dessert {
+        background-image: url(../img/desserts/mango_pudding.jpg);
+        background-position: center;
+        grid-row: 2;
+    }
+    
+    .item:last-child .dessert {
+        background-image: url(../img/desserts/sundae_madeline-tallman-unsplash.png);
+        background-position: 50% 55%;
+        grid-row: 1 / 3;
+    }
+}
+

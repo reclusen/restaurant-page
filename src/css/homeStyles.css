@@ -1,0 +1,371 @@
+.hero-section {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.hero-inner {
+    width: 100%;
+    height: 100%;
+    clip-path: content-box;
+}
+
+.hero-img {
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.landing-page .hero-text {
+    display: flex;
+    align-items: center;
+    font-size: 8rem;
+    text-transform: uppercase;
+}
+
+.description:nth-child(2) .hero-img {
+    background-image: url(../img/pizzas/fresh_pizza_fatima-akram-unsplash.png);
+    background-size: cover;
+    background-position: 50% 35%;
+}
+
+.description:nth-child(2) .hero-text {
+    align-items: end;
+    line-height: 125px;
+    font-size: 8rem;
+    margin-left: 15px;
+    margin-bottom: 40px;
+    width: 80%;
+}
+
+.description:nth-child(3) .hero-img {
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.75)), url(../img/other/tim-zankert-ZWweujwrLEM-unsplash.png) center/cover;
+    background-attachment: fixed;
+}
+
+.description:nth-child(3) .hero-text {
+    align-items: end;
+    font-size: 4.5rem;
+    width: 80%;
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.popular-choices .hero-text {
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+.pizzas {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.pizza {
+    width: 25%;
+    height: 100%;
+}
+
+.pizza .img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transform: translateY(0%);
+}
+
+.pizza:nth-child(1) .img {
+    background-image: url(../img/pizzas/bbq_chicken_pizza_warda-naeem-unsplash.png);
+    background-position: 25% 75%;
+}
+
+
+.pizza:nth-child(2) .img {
+    background-image: url(../img/pizzas/pepperoni_pizza_david-foodphototasty-unsplash.png);
+    background-position: 50% 50%;
+}
+
+.pizza:nth-child(3) .img {
+    background-image: url(../img/pizzas/four_cheese_pizza_engin-akyurt-unsplash.png);
+    background-position: 75% 25%;
+}
+
+.pizza:nth-child(4) .img {
+    background-image: url(../img/pizzas/meat_lovers_sharan-pagadala-unsplash.png);
+    background-position: 75% 50%;
+    transform: scale(1.1);
+}
+
+.social .hero-inner {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.social .left {
+    width: 100%;
+    height: 100%;
+}
+
+.social .hero-img {
+    background-image: url(../img/pizzas/social_media_yoav-aziz-unsplash.png);
+    background-size: cover;
+    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 50px;
+}
+
+.social .hero-text {
+    align-items: end;
+    justify-content: flex-start;
+    font-size: 6rem;
+    line-height: 100px;
+    margin-left: 45px;
+    margin-bottom: 35px;
+    width: 45%;
+}
+
+.twitter-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    font-family: "Franklin Gothic Medium", sans-serif;
+    height: 38%;
+    width: 65%;
+
+    .name-container {
+        display: inline flex;
+        width: 100%;
+        padding: 15px 10px 0;
+
+        .name {
+            color: #080808;
+            font-weight: 600;
+            font-size: 1.55rem;
+        }
+
+        .name::after {
+            content: "";
+            background-image: url(../svg/verified-rounded.svg);
+            width: 12px;
+            height: 12px;
+            margin-top: 5px;
+            margin-left: 2.5px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        .user-handle {
+            color: #808080;
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+    }
+
+    .name-container::before {
+        display: inline-block;
+        content: "";
+        background-image: url(../img/other/apple.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 50px;
+        height: 50px;
+        padding-right: 25px;
+    }
+
+    .tweet {
+        color: #080808;
+        padding: 0 15px;
+        font-weight: 700;
+        font-size: 2.15rem;
+        padding: 25px 20px;
+    }
+
+    .metadata {
+        font-weight: 500;
+        font-size: 1.25rem;
+        padding-left: 20px;
+        color: #808080;
+        
+        .views {
+            color:#080808;
+            font-weight: 700;
+            margin-left: 5px;
+        }
+    }
+}
+
+.newsletter .hero-inner {
+    display: flex;
+}
+
+.newsletter .hero-img {
+    background-image: url(../img/pizzas/pizza_sharing_brenna-huff-unsplash.png);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    /* transform: scale(0.9); */
+}
+
+.newsletter-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    > *:not(:first-child) {
+        margin-top: 40px;
+    }
+
+    .hero-title {
+        width: 75%;
+        text-align: center;
+        line-height: 100px;
+        font-size: 6rem;
+    }
+
+    .input {
+        display: flex;
+        width: 35%;
+        height: 7%;
+        
+        input {
+            color: #696969;
+            font-size: 1.25rem;
+            width: 75%;
+            border: 0;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            padding: 0 15px;
+        }
+        
+        input:focus {
+            color: #080808;
+            outline: none;
+        }
+
+        button {
+            background-color: #696969;
+            border: 0;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-size: 1.15rem;
+            width: 25%;
+            cursor: pointer;
+        }
+    }
+
+    .newsletter-text {
+        font-size: 1.35rem;
+    }
+}
+
+.branches {
+    overflow: hidden;
+}
+
+.branches .hero-title {
+    position: absolute;
+    top: -10%;
+    font-size: 3rem;
+    letter-spacing: 27.5px;
+
+    path {
+        fill: transparent;
+    }
+
+    text {
+        fill: #f2f2f2;
+    }
+}
+
+.branch-addresses {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.branch-address {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    font-family: "Franklin Gothic Medium", sans-serif;
+    width: 100%;
+    height: 100%;
+
+    .address-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        height: 90%;
+        z-index: 2;
+    }
+    
+    .name {
+        font-size: 3rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .address {
+        width: 50%;
+        font-size: 1.25rem;
+        font-weight: 500;
+        text-align: center;
+    }
+}
+
+.branch-address .hero-img {
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.branch-address:first-child .address-info {
+    transform-origin: bottom left;
+    transform: rotate(25deg) translateX(35%);
+}
+
+.branch-address:last-child .address-info {
+    transform-origin: bottom right;
+    transform: rotate(-25deg) translateX(-35%);
+}
+
+.branch-address:first-child .hero-img {
+    background-image: url(../img/pizzas/pepperoni2.png);
+    transform: translateY(60%) scale(1.75);
+}
+
+.branch-address:nth-child(2) .hero-img {
+    background-image: url(../img/pizzas/pepperoni1.png);
+    transform: translate(22%, -15%) scale(1.75);
+}
+
+.branch-address:last-child .hero-img {
+    background-image: url(../img/pizzas/pepperoni2.png);
+    transform: translateY(55%) rotateY(180deg) scale(1.5);
+}

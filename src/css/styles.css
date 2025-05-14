@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Actor&family=Mochiy+Pop+One&family=Permanent+Marker&family=Podkova:wght@400..800&family=Poiret+One&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Freeman&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #f2f2f2;
+}
+
+body {
+    background-color: #080808;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    z-index: 2;
+
+    .nav-btns {
+        display: flex;
+        justify-content: space-around;
+        width: 75%;
+        text-align: center;
+    }
+
+    .nav-btn {
+        padding: 16px 32px;
+        border: 0;
+        background-color: transparent;
+        font-weight: 800;
+        transition: background-color 0.5s ease-in;
+        cursor: pointer;
+    }
+
+    .nav-btn:hover {
+        background-color: #f2f2f2;
+        color: #080808;
+    }
+}
+
+.landing-page .hero-img {
+    background-image: url(../img/pizzas/fresh_pizza_pablo-pacheco-unsplash.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+
+    .restaurant-name {
+        font-size: 1.75rem;
+        margin-right: 15px;
+    }
+    
+    .social-media-icons {
+        display: flex;
+        justify-content: space-around;
+        width: 15%;
+        align-items: center;
+    
+        font-size: 2.25rem;
+        
+        .fa-square-instagram {
+            font-size: 2.5rem;
+        }
+
+        > * {
+            cursor: pointer;
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+/* newsletter description */
+.actor-regular {
+    font-family: "Actor", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* branches header text */
+.permanent-marker-regular {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* logo */
+.poiret-one-regular {
+    font-family: "Poiret One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* for point of emphasis */
+.abril-fatface-regular {
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* buttons */
+.mochiy-pop-one-regular {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* minor emphasis */
+.podkova-font {
+    font-family: "Podkova", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.libre-franklin-font {
+    font-family: "Libre Franklin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.freeman-regular {
+    font-family: "Freeman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
