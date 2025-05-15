@@ -40,7 +40,7 @@ const displayMenuPage = () => {
     ];
 
     const menuGrid = 
-        htmlTree("#menu", {class: "page hidden"}, [
+        htmlTree("#menu", {class: "page"}, [
             htmlTree("section.hero-section", {class: "landing-page"}, [
                 htmlTree(".hero-inner", [
                     htmlTree("button.arrow-left", {class: "hidden"}, [
@@ -143,7 +143,6 @@ function scrollMenu() {
 
     arrows.forEach(arrow => {
         arrow.addEventListener("click", e => {
-            console.log("clicked", e.currentTarget.className);
 
             if (e.currentTarget.className == "arrow-left") {
                 initialWidth -= menuLength;
@@ -161,8 +160,6 @@ function scrollMenu() {
             }
 
             if (e.currentTarget.className == "arrow-right") {                
-                console.log("initialWidth", initialWidth);
-                
                 initialWidth += menuLength;
 
                 if (initialWidth < maxPossibleLength) {

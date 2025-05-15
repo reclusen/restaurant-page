@@ -45,9 +45,6 @@ const displayHomepage = () => {
         heroInner[i].append(figure, h2);
     }
 
-
-    // console.log("#home", home.children);
-
     addPopularChoicesSection();
     addSocialSection();
     addNewsletterSelection();

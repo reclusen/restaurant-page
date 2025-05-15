@@ -21,7 +21,7 @@ const displayAboutPage = () => {
                 stay updated on our latest creations and special offers.`;
 
     const aboutPageTree = 
-        htmlTree("#about", {class: "page hidden"}, [
+        htmlTree("#about", {class: "page"}, [
             htmlTree("section.hero-section", {class: "landing-page"}, [
                 htmlTree(".hero-inner", [
                     htmlTree("h1.hero-text", {class: fonts.poiretOneRegular}, "The Pizza Place"),
