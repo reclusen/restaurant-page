@@ -5,7 +5,7 @@ import "../css/menuStyles.css";
 
 import displayHomepage from "./home.js";
 import displayAboutPage from "./about.js";
-import displayMenuPage, { scrollMenu } from "./menu.js";
+import displayMenuPage from "./menu.js";
 
 
 loadNavBtns();
@@ -30,6 +30,7 @@ function displayPage(e) {
     
     if (e.target.id == "home") {
         page.remove();
+
         displayHomepage();
     }
 
@@ -37,7 +38,6 @@ function displayPage(e) {
         page.remove();
 
         displayMenuPage();
-        scrollMenu();
     }
 }
 

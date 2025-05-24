@@ -95,7 +95,7 @@ function addSocialSection() {
             htmlTree(".name-container", [
                 htmlTree("div", [
                     htmlTree("h4.name", "John Appleseed"),
-                    htmlTree("h6", "@appleseeder")
+                    htmlTree("h6.user-handle", "@appleseeder")
                 ])
             ]),
             htmlTree("p.tweet", "The pizza here is unlike any other I've tasted. It's real amazing stuff."),
@@ -145,7 +145,7 @@ function addBranchesSelection() {
     ];
     
     const svgDOMTree = svgTree(
-        "svg.hero-title", {viewBox: "0 0 500 500", xlmns: "http://www.w3.org/2000/svg", class: fonts.permanentMarkerRegular}, [
+        "svg.hero-title", {viewBox: "0 0 500 148", xmlns: "http://www.w3.org/2000/svg", class: fonts.permanentMarkerRegular}, [
             svgTree("path", {id: "curve", d: "M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97"}),
             svgTree("text", {width: "500"}, [
                 svgTree("textPath", {href: "#curve"}, "Branches")
@@ -171,8 +171,6 @@ function addBranchesSelection() {
     
     const svg = specifySVGTree(svgDOMTree);
 
-    console.log(svg);
-    
     heroInner.append(svg, branchAddresses);
 }
 

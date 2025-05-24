@@ -3,7 +3,7 @@ import { h as htmlTree } from "hastscript";
 import fonts from "./fonts";
 import { specifyDOMTree } from "./tree.js";
 
-const displayAboutPage = () => {
+export default function displayAboutPage() {
     const header = document.querySelector("#content .header");
 
     const p1 = `More than just a pizza place, The Pizza Place is a labor of love, a culinary dream baked to perfection. 
@@ -68,5 +68,3 @@ const displayAboutPage = () => {
     const aboutPageHTML = specifyDOMTree(aboutPageTree);
     header.insertAdjacentElement("afterend", aboutPageHTML);
 };
-
-export default displayAboutPage;

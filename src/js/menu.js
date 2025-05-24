@@ -43,18 +43,12 @@ const displayMenuPage = () => {
         htmlTree("#menu", {class: "page"}, [
             htmlTree("section.hero-section", {class: "landing-page"}, [
                 htmlTree(".hero-inner", [
-                    htmlTree("button.arrow-left", {class: "hidden"}, [
-                        htmlTree("i.fa-solid", {class: "fa-arrow-left"})
-                    ]),
                     htmlTree(".menu", [
                         pizzaGrid,
                         appetizerGrid,
                         beverageGrid,
                         dessertGrid
                     ]),
-                    htmlTree("button.arrow-right", [
-                        htmlTree("i.fa-solid", {class: "fa-arrow-right"})
-                    ])
                 ])
             ])
         ]);
@@ -96,18 +90,21 @@ function menuItemHover(menus, menuGrids) {
     });
 
     function gridItemHandler(e) {
-        if (e.type == "mouseover") {
-            e.currentTarget.firstElementChild.style.opacity = 0.5;
-            e.currentTarget.firstElementChild.style.scale = 1.05;
+        const figureImage = e.currentTarget.firstElementChild;
+        const textContent = e.currentTarget.lastElementChild;
 
-            e.currentTarget.lastElementChild.style.opacity = 1;
+        if (e.type == "mouseover") {
+            figureImage.style.opacity = 0.5;
+            figureImage.style.scale = 1.05;
+
+            textContent.style.opacity = 1;
         }
 
         if (e.type == "mouseout") {
-            e.currentTarget.firstElementChild.style.opacity = 1;
-            e.currentTarget.firstElementChild.style.scale = 1;
+            figureImage.style.opacity = 1;
+            figureImage.style.scale = 1;
 
-            e.currentTarget.lastElementChild.style.opacity = 0;
+            textContent.style.opacity = 0;
         }
     }
 }
@@ -129,53 +126,4 @@ function generateMenuGrid(headerText, gridClassName, gridItemCount) {
     ]);
 }
 
-function scrollMenu() {
-    const arrows = document.querySelectorAll(`[class^="arrow"]`);
-    const menu = document.querySelector(".menu");
-    const menuLength = menu.offsetWidth;
-    
-    let initialWidth = 0;
-    const maxPossibleLength = menuLength * 3;
-
-    window.addEventListener("load", e => {
-        menu.scrollTo({ left: 0, behavior: "instant" });
-    });
-
-    arrows.forEach(arrow => {
-        arrow.addEventListener("click", e => {
-
-            if (e.currentTarget.className == "arrow-left") {
-                initialWidth -= menuLength;
-
-                if (initialWidth > 0) {
-                    e.currentTarget.classList.remove("hidden");
-                    arrows[1].classList.remove("hidden");
-                }
-
-                menu.scrollBy({ left: -menuLength, behavior: "smooth" });
-
-                if (initialWidth == 0) {
-                    e.currentTarget.classList.add("hidden");                    
-                }
-            }
-
-            if (e.currentTarget.className == "arrow-right") {                
-                initialWidth += menuLength;
-
-                if (initialWidth < maxPossibleLength) {
-                    e.currentTarget.classList.remove("hidden");
-                    arrows[0].classList.remove("hidden");
-                }
-
-                menu.scrollBy({ left: menuLength, behavior: "smooth" });
-
-                if (initialWidth == maxPossibleLength) {
-                    e.currentTarget.classList.add("hidden");
-                }
-            }
-        });
-    });
-}
-
 export default displayMenuPage;
-export { scrollMenu };

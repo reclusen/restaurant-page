@@ -30,7 +30,8 @@
 .landing-page .hero-text {
     display: flex;
     align-items: center;
-    font-size: 8rem;
+    text-align: center;
+    font-size: clamp(3rem, 10vw, 8rem);
     text-transform: uppercase;
 }
 
@@ -56,14 +57,15 @@
 
 .description:nth-child(3) .hero-text {
     align-items: end;
-    font-size: 4.5rem;
+    font-size: clamp(3rem, 8vw, 5rem);
     width: 80%;
-    margin-left: 25px;
+    margin-left: 15px;
     margin-bottom: 20px;
 }
 
 .popular-choices .hero-text {
     font-size: 6rem;
+    text-align: center;
     text-transform: uppercase;
 }
 
@@ -135,7 +137,7 @@
 .social .hero-text {
     align-items: end;
     justify-content: flex-start;
-    font-size: 6rem;
+    font-size: clamp(3.5rem, 50vw, 5.25rem);
     line-height: 100px;
     margin-left: 45px;
     margin-bottom: 35px;
@@ -145,15 +147,17 @@
 .twitter-card {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     background-color: #f2f2f2;
     font-family: "Franklin Gothic Medium", sans-serif;
     height: 38%;
-    width: 65%;
+    width: max(65%, 46rem);
+    padding: 16px;
+    z-index: 2;
 
     .name-container {
         display: inline flex;
         width: 100%;
-        padding: 15px 10px 0;
 
         .name {
             color: #080808;
@@ -166,17 +170,15 @@
             background-image: url(../svg/verified-rounded.svg);
             width: 12px;
             height: 12px;
-            margin-top: 5px;
-            margin-left: 2.5px;
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
         }
 
         .user-handle {
-            color: #808080;
+            color: #A0A0A0;
             font-weight: 500;
-            font-size: 1.05rem;
+            font-size: 1.15rem;
         }
     }
 
@@ -189,27 +191,26 @@
         background-size: contain;
         width: 50px;
         height: 50px;
-        padding-right: 25px;
+        padding-right: 24px;
     }
 
     .tweet {
         color: #080808;
-        padding: 0 15px;
         font-weight: 700;
-        font-size: 2.15rem;
-        padding: 25px 20px;
+        font-size: 2.25rem;
+        padding: 12px;
     }
 
     .metadata {
         font-weight: 500;
         font-size: 1.25rem;
-        padding-left: 20px;
-        color: #808080;
+        padding-left: 12px;
+        color: #A0A0A0;
+        height: 1.25rem;
         
         .views {
             color:#080808;
             font-weight: 700;
-            margin-left: 5px;
         }
     }
 }
@@ -223,7 +224,6 @@
     background-size: cover;
     background-position: center;
     height: 100%;
-    /* transform: scale(0.9); */
 }
 
 .newsletter-box {
@@ -242,19 +242,20 @@
     .hero-title {
         width: 75%;
         text-align: center;
-        line-height: 100px;
-        font-size: 6rem;
+        line-height: clamp(50px, 10vw, 100px);
+        font-size: clamp(3.25rem, 10vw, 6rem);
     }
 
     .input {
         display: flex;
-        width: 35%;
-        height: 7%;
+        justify-content: center;
+        width: max(35%, 184px);
+        height: 40px;
         
         input {
             color: #696969;
             font-size: 1.25rem;
-            width: 75%;
+            max-width: 75%;
             border: 0;
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
@@ -271,14 +272,15 @@
             border: 0;
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
-            font-size: 1.15rem;
+            font-size: 0.75rem;
             width: 25%;
             cursor: pointer;
         }
     }
 
     .newsletter-text {
-        font-size: 1.35rem;
+        text-align: center;
+        font-size: clamp(1.15rem, 5vw, 1.35rem);
     }
 }
 
@@ -286,32 +288,42 @@
     overflow: hidden;
 }
 
+.branches .hero-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
 .branches .hero-title {
-    position: absolute;
-    top: -10%;
-    font-size: 3rem;
-    letter-spacing: 27.5px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    letter-spacing: 10px;
+    z-index: 1;
+    width: max(100%, 500px);
+    height: max(100%, 148px);
+    max-height: 50%;
 
     path {
         fill: transparent;
     }
 
     text {
-        fill: #f2f2f2;
+        fill: #404040;
+        font-size: clamp(4.75rem, 100%, 6rem);
     }
 }
 
 .branch-addresses {
     display: flex;
-    justify-content: center;
     width: 100%;
-    height: 100%;
+    height: 50%;
 }
 
 .branch-address {
     display: flex;
     flex-direction: column;
-    justify-content: end;
     font-family: "Franklin Gothic Medium", sans-serif;
     width: 100%;
     height: 100%;
@@ -320,52 +332,183 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: end;
-        height: 90%;
-        z-index: 2;
+        z-index: 3;
     }
     
     .name {
-        font-size: 3rem;
+        font-size: clamp(0.85rem, 5vw, 3rem);
         text-transform: uppercase;
         text-align: center;
     }
 
     .address {
-        width: 50%;
-        font-size: 1.25rem;
+        width: 75%;
+        font-size: clamp(0.45rem, 5vw, 1.25rem);
         font-weight: 500;
         text-align: center;
     }
-}
 
-.branch-address .hero-img {
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 1;
+    .hero-img {
+        background-attachment: local;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 2;
+    }
 }
 
 .branch-address:first-child .address-info {
     transform-origin: bottom left;
-    transform: rotate(25deg) translateX(35%);
 }
+
+
 
 .branch-address:last-child .address-info {
     transform-origin: bottom right;
-    transform: rotate(-25deg) translateX(-35%);
 }
 
 .branch-address:first-child .hero-img {
     background-image: url(../img/pizzas/pepperoni2.png);
-    transform: translateY(60%) scale(1.75);
+    transform: rotate(-80deg);
 }
 
 .branch-address:nth-child(2) .hero-img {
+    background-position: center;
     background-image: url(../img/pizzas/pepperoni1.png);
-    transform: translate(22%, -15%) scale(1.75);
+    background-size: 125%;
+    transform: rotate(180deg);
 }
 
 .branch-address:last-child .hero-img {
     background-image: url(../img/pizzas/pepperoni2.png);
-    transform: translateY(55%) rotateY(180deg) scale(1.5);
+    transform: rotate(80deg) rotateY(180deg);
+}
+
+@media only screen and (max-width: 400px) {
+    article.twitter-card {
+        height: 19%;
+
+        .name-container {
+            .name {
+                font-size: 1.05rem;
+            }
+
+            .user-handle {
+                font-size: 0.65rem;
+            }
+        }
+
+        .name-container::before {
+            margin: auto 0;
+            width: 30px;
+            height: 30px;
+        }
+
+        .tweet {
+            font-size: 1.3rem;
+        }
+
+        .metadata {
+            font-size: 0.75rem;
+        }
+    }
+
+    .branches .hero-title {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 512px) {
+    #home {
+        overflow-x: hidden;
+    }
+
+    .description:nth-child(2) .hero-text {
+        line-height: 50px;
+        font-size: 4rem;
+        width: 60%;
+    }
+    
+    .description:nth-child(3) .hero-text {
+        width: unset;
+    }
+
+    .popular-choices .hero-text {
+        font-size: 4rem;
+    }
+
+    .pizzas {
+        flex-direction: column;
+        
+        .pizza {
+            width: 100%;
+        }
+    }
+
+    .newsletter-text {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .social .hero-inner {
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .social .hero-img {
+        margin: 0 auto;
+    }
+
+    .social .hero-text {
+        line-height: 85px;
+        text-align: center;
+        width: fit-content;
+        margin: auto;
+    }
+
+    .twitter-card {
+        position: absolute;
+        justify-content: space-around;
+        align-self: center;
+        width: clamp(310px, 90vw, 470px); 
+        height: 33%;
+        padding: 0 16px;
+
+        .name-container {
+            .name {
+                font-size: 1.25rem;
+            }
+
+            .user-handle {
+                font-size: 0.9rem;
+            }
+        }
+        
+        .name-container::before {
+            width: 40px;
+            height: 40px;
+        }
+
+        .tweet {
+            padding: 0 12px;
+            font-size: 1.95rem;
+        }
+
+        .metadata {
+            font-size: 0.95rem;
+        }
+    }
+    
+    .branch-address:first-child .hero-img {
+        transform: rotate(0);
+    }
+
+    .branch-address:nth-child(2) .hero-img {
+        background-size: 250%;
+    }
+
+    .branch-address:last-child .hero-img {
+        transform: rotateY(180deg);
+    }
 }
